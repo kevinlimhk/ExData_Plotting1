@@ -26,8 +26,11 @@ plot3 <- function() {
     
     # Plot 3
     # Set par parameters
+    # Set to only plot
     par(mfrow=c(1,1))
+    # Set margins for the plot
     par(mar=c(3.1,3.1,2.8,0.5))
+    # Set the distance from the axis values to the axis lines
     par(mgp = c(3, 0.4, 0))
     
     # Line Plots
@@ -35,11 +38,14 @@ plot3 <- function() {
          type="l",
          xlab = "", ylab = "",
          main = "", cex.lab=0.8, cex.axis=0.7, tck=-0.02)
+    # Adding text to y axis
     mtext("Energy sub metering", side=2, line=1.8, cex=0.8)
+    # Adding Lines for the other variables
     lines(dataset$DateTime, dataset$Sub_metering_2,
           type="l", col="red")
     lines(dataset$DateTime, dataset$Sub_metering_3,
           type="l", col="blue")
+    # Adding Legend
     legend("topright", cex=0.75, y.intersp=0.6, x.intersp=0.3, lty=1, col = c("black","red","blue"), legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
     
     
