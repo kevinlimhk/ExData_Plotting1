@@ -26,14 +26,18 @@ plot1 <- function() {
     
     # Plot1
     # Set par parameters
+    # Set to only 1 graph
     par(mfrow=c(1,1))
+    # Set Plot margins
     par(mar=c(4.1,3.5,2.1,2.1))
+    # Set the distinct from the axis labels to the axis lines
     par(mgp = c(3, 0.4, 0))
     
     # Histogram Plot
     hist(dataset$Global_active_power, col="red",
          ylim=c(0,1200), ylab=" ", xlab=" ", 
          main="Global Active Power", cex.lab=0.8, cex.axis=0.8, cex.main=0.9, tck=-0.02)
+    # Adding texts by the axis
     mtext("Global Active Power (kilowatts)", side=1, line=1.4, cex=0.75)
     mtext("Frequency", side=2, line=1.8, cex=0.8)
     
