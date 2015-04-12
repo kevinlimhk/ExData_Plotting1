@@ -26,8 +26,11 @@ plot2 <- function() {
     
     # Plot 2
     # Set par parameters
+    # Set to only 1 plot
     par(mfrow=c(1,1))
+    # Set margins for the plot
     par(mar=c(3.1,3.1,2.8,1.1))
+    # Set the distance from the axis labels to the axis lines
     par(mgp = c(3, 0.4, 0))
     
     # Line Plot
@@ -35,6 +38,7 @@ plot2 <- function() {
          type="l",
          xlab = "", ylab ="",
          main = "", cex.lab=0.8, cex.axis=0.8, tck=-0.02)
+    # Adding text by the y axis
     mtext("Global Active Power (kilowatts)", side=2, line=1.8, cex=0.8)
     
 }
